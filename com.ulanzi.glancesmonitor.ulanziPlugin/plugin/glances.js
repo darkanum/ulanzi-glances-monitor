@@ -49,6 +49,10 @@
           continue;
         }
         if (response.status === 401 || response.status === 403) throw new MetricError('auth');
+        if (response.status === 400) {
+          this.version = version;
+          throw new MetricError('nodata');
+        }
         if (response.status === 404) {
           lastError = missing;
           continue;
