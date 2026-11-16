@@ -72,6 +72,22 @@ Ulanzi Studio stores the key settings, including the password, on the deck compu
 
 If the category does not appear, read the plugin log at `%APPDATA%\Ulanzi\UlanziDeck\logs\com.ulanzi.ulanzistudio.glancesmonitor.log`.
 
+## Optional: a neon web dashboard for Glances
+
+`glances-webui/` replaces the Glances browser page with one dashboard: CPU, RAM, GPU, swap and load gauges with history, per-core bars, sensors, disks, network, disk I/O, top processes and containers. Panels with no data stay hidden. It has four color themes, picked in the page header. It uses the same URL and the same login as Glances, and it reads only the Glances API.
+
+![Web dashboard](docs/webui.png)
+
+1. Copy the `glances-webui` folder to the server.
+2. Add its path to the `[outputs]` section of `glances.conf` (`~/.config/glances/` on Linux, `%APPDATA%\glances\` on Windows):
+
+   ```ini
+   [outputs]
+   webui_root_path=/path/to/glances-webui
+   ```
+
+3. Restart Glances. To get the original page back, remove the line and restart again.
+
 ## Key states
 
 | Key shows | Cause | Fix |

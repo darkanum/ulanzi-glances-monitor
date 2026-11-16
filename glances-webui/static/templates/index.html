@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" data-theme="evangelion-01">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Glances</title>
+  <link rel="icon" href="static/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="static/dashboard.css">
+</head>
+<body data-refresh="{{ refresh_time }}">
+  <header class="top">
+    <div class="host">
+      <h1 id="hostname">Glances</h1>
+      <p id="platform" class="muted"></p>
+    </div>
+    <div class="meta">
+      <span id="status" class="status">connecting</span>
+      <span id="uptime" class="muted"></span>
+      <select id="theme" aria-label="Theme">
+        <option value="evangelion-01">evangelion-01</option>
+        <option value="magi-system">magi-system</option>
+        <option value="terminal-dogma">terminal-dogma</option>
+        <option value="unit-00">unit-00</option>
+      </select>
+    </div>
+  </header>
+  <main>
+    <section id="alerts" class="alerts" hidden></section>
+    <section id="gauges" class="gauges"></section>
+    <article class="card" id="cores-card" hidden><h2>Cores</h2><div id="cores" class="cores"></div></article>
+    <section class="masonry">
+      <article class="card" id="sensors-card" hidden><h2>Sensors</h2><div id="sensors" class="rows"></div></article>
+      <article class="card" id="fs-card" hidden><h2>Disks</h2><div id="fs" class="rows"></div></article>
+      <article class="card" id="net-card" hidden><h2>Network</h2><div id="net" class="table"></div></article>
+      <article class="card" id="diskio-card" hidden><h2>Disk I/O</h2><div id="diskio" class="table"></div></article>
+      <article class="card" id="procs-card" hidden><h2>Processes</h2><div id="procs" class="table"></div></article>
+    </section>
+    <article class="card" id="containers-card" hidden><h2>Containers</h2><div id="containers" class="table"></div></article>
+  </main>
+  <script src="static/dashboard.js"></script>
+</body>
+</html>
