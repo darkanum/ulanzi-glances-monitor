@@ -315,7 +315,7 @@
           cells: [
             `<span class="ellipsis">${esc(c.name)}</span>`,
             `<span class="pill lvl-${lvl}">${esc(status || '–')}</span>`,
-            `<span class="r">${num(c.cpu_percent, 1)}%</span>`,
+            `<span class="r">${Number.isFinite(c.cpu_percent) ? `${num(c.cpu_percent, 1)}%` : '–'}</span>`,
             `<span class="r">${bytes(c.memory && c.memory.usage)}</span>`,
           ],
         };
@@ -333,6 +333,11 @@
         return `<span class="alert lvl-${lvl}">${esc(a.state)} · ${esc(a.type)} ${num(a.max, 1)}</span>`;
       })
       .join('');
+  }
+
+  function warmingUp(d) {
+    const cores = Array.isArray(d.percpu) ? d.percpu : [];
+    return cores.length > 0 && cores.every((c) => c.total >= 99.9) && d.cpu && d.cpu.total < 50;
   }
 
   function setStatus(live) {
@@ -377,7 +382,7 @@
     byId('uptime').textContent = d.uptime ? `up ${d.uptime}` : '';
     renderAlerts(d.alert);
     renderGauges(d);
-    renderCores(d.percpu);
+    if (!warmingUp(d)) renderCores(d.percpu);
     renderSensors(d.sensors);
     renderFs(d.fs);
     renderNet(d.network);
