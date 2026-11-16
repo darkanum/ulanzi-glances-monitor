@@ -23,6 +23,7 @@
 
   const history = new Map();
   let available = null;
+  let windows = false;
 
   const byId = (id) => document.getElementById(id);
 
@@ -190,7 +191,7 @@
         })
       );
     }
-    if (d.load && Number.isFinite(d.load.min1)) {
+    if (!windows && d.load && Number.isFinite(d.load.min1)) {
       const cores = d.load.cpucore || d.cores || 1;
       const pct = (d.load.min1 / cores) * 100;
       cards.push(
@@ -345,6 +346,7 @@
     const [system, quicklook, core] = await Promise.all(
       ['system', 'quicklook', 'core'].map((p) => (available.has(p) ? getJson(p).catch(() => null) : null))
     );
+    windows = Boolean(system && /windows/i.test(system.os_name));
     if (system) {
       byId('hostname').textContent = system.hostname || 'Glances';
       document.title = `${system.hostname} · Glances`;
@@ -360,15 +362,16 @@
 
   async function tick(cores) {
     const keys = Object.keys(ENDPOINTS).filter((k) => available.has(k));
-    const results = await Promise.allSettled(keys.map((k) => getJson(ENDPOINTS[k])));
     const d = { cores };
     let anyOk = false;
-    results.forEach((r, i) => {
-      if (r.status === 'fulfilled') {
-        d[keys[i]] = r.value;
+    for (const key of keys) {
+      try {
+        d[key] = await getJson(ENDPOINTS[key]);
         anyOk = true;
+      } catch (error) {
+        d[key] = null;
       }
-    });
+    }
     setStatus(anyOk);
     if (!anyOk) return;
     byId('uptime').textContent = d.uptime ? `up ${d.uptime}` : '';

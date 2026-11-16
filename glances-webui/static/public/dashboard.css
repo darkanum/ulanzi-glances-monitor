@@ -192,7 +192,7 @@ main {
 
 .gauges {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
 }
 
@@ -246,6 +246,8 @@ main {
 .gauge {
   position: relative;
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: start;
   gap: 8px;
   border-top: 3px solid var(--lvl);
 }
@@ -264,7 +266,10 @@ main {
 }
 
 .gauge .sub {
+  flex: 1 1 auto;
+  min-width: 0;
   overflow: hidden;
+  text-align: right;
   color: var(--legend);
   text-overflow: ellipsis;
   white-space: nowrap;
