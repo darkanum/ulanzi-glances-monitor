@@ -1,0 +1,13 @@
+[Unit]
+Description=Glances web server for the Homelab Stats Ulanzi plugin
+After=network-online.target
+
+[Service]
+ExecStart=%h/.local/bin/glances -w -B <SERVER_IP> -p 61208 -t 5 --disable-autodiscover --disable-plugin amps,cloud,connections,folders,ip,irq,ports,raid,smart,wifi,vms,programlist
+Restart=always
+RestartSec=5
+MemoryMax=256M
+Nice=10
+
+[Install]
+WantedBy=default.target

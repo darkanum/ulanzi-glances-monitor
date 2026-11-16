@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Homelab metric</title>
+  <link rel="stylesheet" href="../../libs/css/uspi.css">
+</head>
+<body>
+  <div class="uspi-wrapper hidden">
+    <form id="property-inspector">
+      <div class="uspi-item">
+        <div class="uspi-item-label" data-localize>Metric</div>
+        <select class="uspi-item-value select" name="metric">
+          <option value="cpu">CPU</option>
+          <option value="mem">RAM</option>
+          <option value="swap">Swap</option>
+          <option value="load">Load (1 min)</option>
+        </select>
+      </div>
+      <div class="uspi-item">
+        <div class="uspi-item-label" data-localize>Glances URL</div>
+        <input class="uspi-item-value" name="host" type="text" value="http://localhost:61208">
+      </div>
+      <div class="uspi-item">
+        <div class="uspi-item-label" data-localize>Interval</div>
+        <select class="uspi-item-value select" name="interval">
+          <option value="2">2 s</option>
+          <option value="5" selected>5 s</option>
+          <option value="10">10 s</option>
+          <option value="30">30 s</option>
+        </select>
+      </div>
+    </form>
+  </div>
+
+  <script src="../../libs/js/constants.js"></script>
+  <script src="../../libs/js/eventEmitter.js"></script>
+  <script src="../../libs/js/timers.js"></script>
+  <script src="../../libs/js/utils.js"></script>
+  <script src="../../libs/js/ulanziApi.js"></script>
+  <script src="./inspector.js"></script>
+</body>
+</html>
