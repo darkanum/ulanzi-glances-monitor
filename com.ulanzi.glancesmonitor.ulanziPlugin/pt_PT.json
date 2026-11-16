@@ -18,6 +18,7 @@
     "Disk": "Disco",
     "Network": "Rede",
     "Temperature": "Temperatura",
+    "GPU temperature": "Temperatura da GPU",
     "Target": "Alvo",
     "Auto": "Automático",
     "Label": "Rótulo",

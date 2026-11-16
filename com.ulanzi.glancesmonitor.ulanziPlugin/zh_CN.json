@@ -18,6 +18,7 @@
     "Disk": "磁盘",
     "Network": "网络",
     "Temperature": "温度",
+    "GPU temperature": "GPU 温度",
     "Target": "目标",
     "Auto": "自动",
     "Label": "标签",

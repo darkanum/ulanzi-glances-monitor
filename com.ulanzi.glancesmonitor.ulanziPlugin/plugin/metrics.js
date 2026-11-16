@@ -106,6 +106,10 @@
     return target ? findTarget(gpus, 'gpu_id', target) : gpus[0];
   }
 
+  function gpuTemperatureCandidates(list) {
+    return list.filter((gpu) => typeof gpu.temperature === 'number');
+  }
+
   const METRICS = {
     cpu: {
       endpoint: 'cpu',
@@ -180,6 +184,18 @@
         const gpu = pickGpu(data, target);
         const proc = typeof gpu.proc === 'number' ? gpu.proc : 0;
         return { bar: proc, text: percentText(proc), sublabel: gpu.gpu_id };
+      },
+    },
+    gputemp: {
+      endpoint: 'gpu',
+      label: 'GPU TEMP',
+      thresholds: [75, 85],
+      targetField: 'gpu_id',
+      candidates: gpuTemperatureCandidates,
+      read: (data, target) => {
+        const gpu = target ? pickGpu(data, target) : requireList(gpuTemperatureCandidates(requireList(data)))[0];
+        if (typeof gpu.temperature !== 'number') throw new MetricError('nodata');
+        return { bar: gpu.temperature, text: `${Math.round(gpu.temperature)}°`, sublabel: gpu.gpu_id };
       },
     },
   };

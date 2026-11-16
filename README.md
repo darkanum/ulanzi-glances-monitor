@@ -6,10 +6,10 @@ A Ulanzi Studio plugin that shows live metrics of any server that runs [Glances]
 
 ## Features
 
-- Eight metrics: CPU, memory, swap, load (1 minute), disk, network, temperature, and GPU.
+- Nine metrics: CPU, memory, swap, load (1 minute), disk, network, temperature, GPU usage, and GPU temperature.
 - Glances 4 (API v4) and Glances 3 (API v3). The plugin finds the API version by itself.
 - Password login (HTTP Basic) for servers that run Glances with `--password`. Glances 4 only.
-- Disk, network, temperature, and GPU keys can show a specific partition, interface, sensor, or GPU. The settings form lists what the server has. "Auto" picks the root partition, the busiest physical interface, the CPU sensor, and the first GPU.
+- Disk, network, temperature, and GPU keys can show a specific partition, interface, sensor, or GPU. The settings form lists what the server has. "Auto" picks the root partition, the busiest physical interface, the CPU sensor, and the first GPU (for GPU temperature, the first GPU that reports one).
 - Colors by level: green, amber, red. You can set the two limits for each key. Temperature keys use the sensor's own limits when Glances reports them.
 - A clear state on each key when something is wrong:
 

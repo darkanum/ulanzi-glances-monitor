@@ -18,6 +18,7 @@
     "Disk": "Disco",
     "Network": "Red",
     "Temperature": "Temperatura",
+    "GPU temperature": "Temperatura de la GPU",
     "Target": "Objetivo",
     "Auto": "Automático",
     "Label": "Etiqueta",

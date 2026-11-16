@@ -78,3 +78,16 @@ test('rates use short binary units', () => {
   assert.equal(rateText(1536), '1.5K');
   assert.equal(rateText(50 * 1024 * 1024), '50M');
 });
+
+test('GPU temperature reads the first GPU that reports one', () => {
+  assert.deepEqual(METRICS.gputemp.read(v4.gpu, ''), { bar: 55, text: '55°', sublabel: 'amd0' });
+  const gpus = [
+    { gpu_id: 'intel0', proc: 3, temperature: null },
+    { gpu_id: 'nvidia0', proc: 34, temperature: 51.4 },
+  ];
+  assert.equal(METRICS.gputemp.read(gpus, '').text, '51°');
+  assert.deepEqual(targetOptions('gputemp', gpus), ['nvidia0']);
+  assert.throws(() => METRICS.gputemp.read(gpus, 'intel0'), { code: 'nodata' });
+  assert.throws(() => METRICS.gputemp.read([{ gpu_id: 'intel0', temperature: null }], ''), { code: 'nodata' });
+  assert.throws(() => METRICS.gputemp.read(v3.gpu, ''), { code: 'nodata' });
+});

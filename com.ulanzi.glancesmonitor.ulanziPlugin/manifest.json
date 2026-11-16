@@ -16,7 +16,7 @@
   "Name": "Glances Monitor",
   "Description": "Live server metrics from the Glances REST API on your keys.",
   "Icon": "assets/icons/icon.png",
-  "Version": "1.0.1",
+  "Version": "1.1.0",
   "Category": "Glances Monitor",
   "CategoryIcon": "assets/icons/categoryIcon.png",
   "CodePath": "plugin/app.html",

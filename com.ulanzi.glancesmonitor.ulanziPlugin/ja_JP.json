@@ -18,6 +18,7 @@
     "Disk": "ディスク",
     "Network": "ネットワーク",
     "Temperature": "温度",
+    "GPU temperature": "GPU 温度",
     "Target": "対象",
     "Auto": "自動",
     "Label": "ラベル",

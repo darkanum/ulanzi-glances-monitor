@@ -18,6 +18,7 @@
     "Disk": "Datenträger",
     "Network": "Netzwerk",
     "Temperature": "Temperatur",
+    "GPU temperature": "GPU-Temperatur",
     "Target": "Ziel",
     "Auto": "Automatisch",
     "Label": "Beschriftung",

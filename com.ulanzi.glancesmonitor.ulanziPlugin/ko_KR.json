@@ -18,6 +18,7 @@
     "Disk": "디스크",
     "Network": "네트워크",
     "Temperature": "온도",
+    "GPU temperature": "GPU 온도",
     "Target": "대상",
     "Auto": "자동",
     "Label": "레이블",
