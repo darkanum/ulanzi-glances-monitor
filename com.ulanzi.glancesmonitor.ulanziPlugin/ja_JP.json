@@ -1,0 +1,35 @@
+{
+  "Name": "Glances Monitor",
+  "Description": "Glances REST API のサーバーメトリクスをキーにリアルタイム表示します。",
+  "Actions": [
+    {
+      "Name": "サーバーメトリクス",
+      "Tooltip": "Glances が動作するサーバーの CPU、メモリ、スワップ、ロード、ディスク、ネットワーク、温度、GPU"
+    }
+  ],
+  "Localization": {
+    "Glances URL": "Glances の URL",
+    "Username": "ユーザー名",
+    "Password": "パスワード",
+    "Metric": "メトリクス",
+    "Memory": "メモリ",
+    "Swap": "スワップ",
+    "Load (1 min)": "ロード（1 分）",
+    "Disk": "ディスク",
+    "Network": "ネットワーク",
+    "Temperature": "温度",
+    "Target": "対象",
+    "Auto": "自動",
+    "Label": "ラベル",
+    "Interval": "更新間隔",
+    "Warning at": "警告",
+    "Critical at": "危険",
+    "Checking…": "確認中…",
+    "Connected to Glances API": "Glances API に接続しました",
+    "Enter the Glances server URL": "Glances サーバーの URL を入力してください",
+    "Server not reachable": "サーバーに接続できません",
+    "Login failed": "ログインに失敗しました",
+    "Not a Glances server": "Glances サーバーではありません",
+    "This server has no data for this metric": "このサーバーにはこのメトリクスのデータがありません"
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "cpu": {
+    "total": 1.9
+  },
+  "mem": {
+    "percent": 41.0,
+    "total": 15612760064,
+    "used": 6404538368
+  },
+  "memswap": {
+    "percent": 24.6,
+    "total": 11811151872,
+    "used": 2907496448
+  },
+  "load": {
+    "min1": 0.25048828125,
+    "min5": 0.36181640625,
+    "min15": 0.3974609375,
+    "cpucore": 16
+  },
+  "fs": [
+    {
+      "device_name": "/dev/mapper/ubuntu--vg-ubuntu--lv",
+      "fs_type": "ext4",
+      "mnt_point": "/",
+      "size": 1004298338304,
+      "used": 80681336832,
+      "free": 881668661248,
+      "percent": 8.4,
+      "key": "mnt_point"
+    },
+    {
+      "device_name": "/dev/loop0",
+      "fs_type": "squashfs",
+      "mnt_point": "/snap/core26/646",
+      "size": 63569920,
+      "used": 63569920,
+      "free": 0,
+      "percent": 100.0,
+      "key": "mnt_point"
+    },
+    {
+      "device_name": "/dev/loop1",
+      "fs_type": "squashfs",
+      "mnt_point": "/snap/lxd/41172",
+      "size": 139722752,
+      "used": 139722752,
+      "free": 0,
+      "percent": 100.0,
+      "key": "mnt_point"
+    }
+  ],
+  "network": [
+    {
+      "interface_name": "lo",
+      "alias": null,
+      "time_since_update": 228.84928512573242,
+      "cumulative_rx": 264694099,
+      "rx": 64912,
+      "cumulative_tx": 264694099,
+      "tx": 64912,
+      "cumulative_cx": 529388198,
+      "cx": 129824,
+      "is_up": true,
+      "speed": 0,
+      "key": "interface_name"
+    },
+    {
+      "interface_name": "enp1s0",
+      "alias": null,
+      "time_since_update": 228.84928512573242,
+      "cumulative_rx": 0,
+      "rx": 0,
+      "cumulative_tx": 0,
+      "tx": 0,
+      "cumulative_cx": 0,
+      "cx": 0,
+      "is_up": false,
+      "speed": 0,
+      "key": "interface_name"
+    },
+    {
+      "interface_name": "bond0",
+      "alias": null,
+      "time_since_update": 228.84928512573242,
+      "cumulative_rx": 81553442775,
+      "rx": 1504822,
+      "cumulative_tx": 9645011050,
+      "tx": 2947933,
+      "cumulative_cx": 91198453825,
+      "cx": 4452755,
+      "is_up": true,
+      "speed": 2621440000,
+      "key": "interface_name"
+    },
+    {
+      "interface_name": "docker0",
+      "alias": null,
+      "time_since_update": 228.84928512573242,
+      "cumulative_rx": 37444159,
+      "rx": 0,
+      "cumulative_tx": 1330754040,
+      "tx": 8532,
+      "cumulative_cx": 1368198199,
+      "cx": 8532,
+      "is_up": true,
+      "speed": 10485760000,
+      "key": "interface_name"
+    },
+    {
+      "interface_name": "tailscale0",
+      "alias": null,
+      "time_since_update": 228.84928512573242,
+      "cumulative_rx": 326223,
+      "rx": 54894,
+      "cumulative_tx": 10508660,
+      "tx": 41081,
+      "cumulative_cx": 10834883,
+      "cx": 95975,
+      "is_up": true,
+      "speed": 0,
+      "key": "interface_name"
+    }
+  ],
+  "sensors": [
+    {
+      "label": "Composite",
+      "unit": "C",
+      "value": 46,
+      "warning": 74,
+      "critical": 79,
+      "type": "temperature_core",
+      "key": "label"
+    },
+    {
+      "label": "Tctl",
+      "unit": "C",
+      "value": 66,
+      "warning": null,
+      "critical": null,
+      "type": "temperature_core",
+      "key": "label"
+    },
+    {
+      "label": "iwlwifi_1_0 0",
+      "unit": "C",
+      "value": 55,
+      "warning": null,
+      "critical": null,
+      "type": "temperature_core",
+      "key": "label"
+    },
+    {
+      "label": "edge",
+      "unit": "C",
+      "value": 56,
+      "warning": null,
+      "critical": null,
+      "type": "temperature_core",
+      "key": "label"
+    }
+  ],
+  "gpu": []
+}

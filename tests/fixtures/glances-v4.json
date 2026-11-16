@@ -1,0 +1,184 @@
+{
+  "cpu": {
+    "total": 1.3
+  },
+  "mem": {
+    "percent": 44.1,
+    "total": 15612760064,
+    "used": 6889496448
+  },
+  "memswap": {
+    "percent": 24.6,
+    "total": 11811151872,
+    "used": 2907496448
+  },
+  "load": {
+    "min1": 0.25048828125,
+    "min5": 0.36181640625,
+    "min15": 0.3974609375,
+    "cpucore": 16
+  },
+  "fs": [
+    {
+      "device_name": "/dev/mapper/ubuntu--vg-ubuntu--lv",
+      "fs_type": "ext4",
+      "mnt_point": "/",
+      "size": 1004298338304,
+      "used": 80681320448,
+      "free": 881668677632,
+      "percent": 8.4,
+      "key": "mnt_point"
+    },
+    {
+      "device_name": "/dev/loop0",
+      "fs_type": "squashfs",
+      "mnt_point": "/snap/core26/646",
+      "size": 63569920,
+      "used": 63569920,
+      "free": 0,
+      "percent": 100.0,
+      "key": "mnt_point"
+    },
+    {
+      "device_name": "/dev/loop1",
+      "fs_type": "squashfs",
+      "mnt_point": "/snap/lxd/41172",
+      "size": 139722752,
+      "used": 139722752,
+      "free": 0,
+      "percent": 100.0,
+      "key": "mnt_point"
+    }
+  ],
+  "network": [
+    {
+      "bytes_sent": 75518,
+      "bytes_recv": 75518,
+      "speed": 0,
+      "key": "interface_name",
+      "interface_name": "lo",
+      "alias": null,
+      "bytes_all": 151036,
+      "time_since_update": 251.5442578792572,
+      "bytes_recv_gauge": 264680362,
+      "bytes_recv_rate_per_sec": 300.0,
+      "bytes_sent_gauge": 264680362,
+      "bytes_sent_rate_per_sec": 300.0,
+      "bytes_all_gauge": 529360724,
+      "bytes_all_rate_per_sec": 600.0
+    },
+    {
+      "bytes_sent": 0,
+      "bytes_recv": 0,
+      "speed": 0,
+      "key": "interface_name",
+      "interface_name": "enp1s0",
+      "alias": null,
+      "bytes_all": 0,
+      "time_since_update": 251.5442578792572,
+      "bytes_recv_gauge": 0,
+      "bytes_recv_rate_per_sec": 0,
+      "bytes_sent_gauge": 0,
+      "bytes_sent_rate_per_sec": 0,
+      "bytes_all_gauge": 0,
+      "bytes_all_rate_per_sec": 0
+    },
+    {
+      "bytes_sent": 5159745,
+      "bytes_recv": 91160355,
+      "speed": 2621440000,
+      "key": "interface_name",
+      "interface_name": "bond0",
+      "alias": null,
+      "bytes_all": 96320100,
+      "time_since_update": 251.5442578792572,
+      "bytes_recv_gauge": 81553442775,
+      "bytes_recv_rate_per_sec": 362402.0,
+      "bytes_sent_gauge": 9645010964,
+      "bytes_sent_rate_per_sec": 20512.0,
+      "bytes_all_gauge": 91198453739,
+      "bytes_all_rate_per_sec": 382915.0
+    },
+    {
+      "bytes_sent": 9644,
+      "bytes_recv": 0,
+      "speed": 10485760000,
+      "key": "interface_name",
+      "interface_name": "docker0",
+      "alias": null,
+      "bytes_all": 9644,
+      "time_since_update": 251.5442578792572,
+      "bytes_recv_gauge": 37444159,
+      "bytes_recv_rate_per_sec": 0.0,
+      "bytes_sent_gauge": 1330754040,
+      "bytes_sent_rate_per_sec": 38.0,
+      "bytes_all_gauge": 1368198199,
+      "bytes_all_rate_per_sec": 38.0
+    },
+    {
+      "bytes_sent": 45370,
+      "bytes_recv": 60504,
+      "speed": 0,
+      "key": "interface_name",
+      "interface_name": "tailscale0",
+      "alias": null,
+      "bytes_all": 105874,
+      "time_since_update": 251.5442578792572,
+      "bytes_recv_gauge": 326223,
+      "bytes_recv_rate_per_sec": 240.0,
+      "bytes_sent_gauge": 10508660,
+      "bytes_sent_rate_per_sec": 180.0,
+      "bytes_all_gauge": 10834883,
+      "bytes_all_rate_per_sec": 420.0
+    }
+  ],
+  "sensors": [
+    {
+      "label": "Composite",
+      "unit": "C",
+      "value": 45,
+      "warning": 74,
+      "critical": 79,
+      "type": "temperature_core",
+      "key": "label"
+    },
+    {
+      "label": "Tctl",
+      "unit": "C",
+      "value": 53,
+      "warning": null,
+      "critical": null,
+      "type": "temperature_core",
+      "key": "label"
+    },
+    {
+      "label": "edge",
+      "unit": "C",
+      "value": 55,
+      "warning": null,
+      "critical": null,
+      "type": "temperature_core",
+      "key": "label"
+    },
+    {
+      "label": "iwlwifi_1_0 0",
+      "unit": "C",
+      "value": 58,
+      "warning": null,
+      "critical": null,
+      "type": "temperature_core",
+      "key": "label"
+    }
+  ],
+  "gpu": [
+    {
+      "key": "gpu_id",
+      "gpu_id": "amd0",
+      "name": "AMD GPU",
+      "mem": 1,
+      "proc": 0,
+      "temperature": 55,
+      "fan_speed": null
+    }
+  ]
+}

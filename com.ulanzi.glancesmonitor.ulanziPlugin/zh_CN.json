@@ -1,0 +1,35 @@
+{
+  "Name": "Glances 监控",
+  "Description": "在按键上实时显示来自 Glances REST API 的服务器指标。",
+  "Actions": [
+    {
+      "Name": "服务器指标",
+      "Tooltip": "运行 Glances 的服务器的 CPU、内存、交换分区、负载、磁盘、网络、温度或 GPU"
+    }
+  ],
+  "Localization": {
+    "Glances URL": "Glances 地址",
+    "Username": "用户名",
+    "Password": "密码",
+    "Metric": "指标",
+    "Memory": "内存",
+    "Swap": "交换分区",
+    "Load (1 min)": "负载（1 分钟）",
+    "Disk": "磁盘",
+    "Network": "网络",
+    "Temperature": "温度",
+    "Target": "目标",
+    "Auto": "自动",
+    "Label": "标签",
+    "Interval": "刷新间隔",
+    "Warning at": "警告阈值",
+    "Critical at": "严重阈值",
+    "Checking…": "正在检查…",
+    "Connected to Glances API": "已连接 Glances API",
+    "Enter the Glances server URL": "请输入 Glances 服务器地址",
+    "Server not reachable": "无法连接服务器",
+    "Login failed": "登录失败",
+    "Not a Glances server": "不是 Glances 服务器",
+    "This server has no data for this metric": "该服务器没有此指标的数据"
+  }
+}

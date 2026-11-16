@@ -1,28 +1,29 @@
 {
   "Actions": [
     {
-      "Name": "Homelab metric",
+      "Name": "Server metric",
       "Icon": "assets/icons/actionIcon.png",
       "PropertyInspectorPath": "property-inspector/metric/inspector.html",
       "state": 0,
       "States": [{ "Name": "Metric", "Image": "assets/icons/actionIcon.png" }],
-      "Tooltip": "CPU, RAM, swap or load from the homelab Glances API",
-      "UUID": "local.homelab.ulanzistudio.stats.metric",
+      "Tooltip": "CPU, RAM, swap, load, disk, network, temperature or GPU of a server running Glances",
+      "UUID": "com.ulanzi.ulanzistudio.glancesmonitor.metric",
+      "Controllers": ["Keypad"],
       "SupportedInMultiActions": false
     }
   ],
   "Author": "darkanum",
-  "Name": "Homelab Stats",
-  "Description": "Shows homelab CPU, RAM, swap and load from Glances.",
+  "Name": "Glances Monitor",
+  "Description": "Live server metrics from the Glances REST API on your keys.",
   "Icon": "assets/icons/icon.png",
   "Version": "1.0.0",
-  "Category": "Homelab Stats",
+  "Category": "Glances Monitor",
   "CategoryIcon": "assets/icons/categoryIcon.png",
   "CodePath": "plugin/app.html",
   "Type": "JavaScript",
   "SupportedInMultiActions": false,
   "PrivateAPI": true,
-  "UUID": "local.homelab.ulanzistudio.stats",
+  "UUID": "com.ulanzi.ulanzistudio.glancesmonitor",
   "OS": [
     { "Platform": "windows", "MinimumVersion": "10" },
     { "Platform": "mac", "MinimumVersion": "10.11" }

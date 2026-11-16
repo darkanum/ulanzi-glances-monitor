@@ -1,0 +1,35 @@
+{
+  "Name": "Glances Monitor",
+  "Description": "Live-Servermetriken aus der Glances-REST-API auf deinen Tasten.",
+  "Actions": [
+    {
+      "Name": "Servermetrik",
+      "Tooltip": "CPU, RAM, Swap, Last, Datenträger, Netzwerk, Temperatur oder GPU eines Servers mit Glances"
+    }
+  ],
+  "Localization": {
+    "Glances URL": "Glances-URL",
+    "Username": "Benutzername",
+    "Password": "Passwort",
+    "Metric": "Metrik",
+    "Memory": "Arbeitsspeicher",
+    "Swap": "Swap",
+    "Load (1 min)": "Last (1 Min.)",
+    "Disk": "Datenträger",
+    "Network": "Netzwerk",
+    "Temperature": "Temperatur",
+    "Target": "Ziel",
+    "Auto": "Automatisch",
+    "Label": "Beschriftung",
+    "Interval": "Intervall",
+    "Warning at": "Warnung ab",
+    "Critical at": "Kritisch ab",
+    "Checking…": "Prüfe…",
+    "Connected to Glances API": "Verbunden mit Glances-API",
+    "Enter the Glances server URL": "Gib die URL des Glances-Servers ein",
+    "Server not reachable": "Server nicht erreichbar",
+    "Login failed": "Anmeldung fehlgeschlagen",
+    "Not a Glances server": "Kein Glances-Server",
+    "This server has no data for this metric": "Dieser Server hat keine Daten für diese Metrik"
+  }
+}

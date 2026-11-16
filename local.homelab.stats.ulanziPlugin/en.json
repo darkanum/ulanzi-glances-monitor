@@ -1,6 +1,0 @@
-{
-  "Name": "Homelab Stats",
-  "Description": "Shows homelab CPU, RAM, swap and load from Glances.",
-  "Actions": [{ "Name": "Homelab metric", "Tooltip": "CPU, RAM, swap or load from the homelab Glances API" }],
-  "Localization": { "Metric": "Metric", "Glances URL": "Glances URL", "Interval": "Interval" }
-}

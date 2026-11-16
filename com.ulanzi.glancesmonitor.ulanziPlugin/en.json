@@ -1,0 +1,35 @@
+{
+  "Name": "Glances Monitor",
+  "Description": "Live server metrics from the Glances REST API on your keys.",
+  "Actions": [
+    {
+      "Name": "Server metric",
+      "Tooltip": "CPU, RAM, swap, load, disk, network, temperature or GPU of a server running Glances"
+    }
+  ],
+  "Localization": {
+    "Glances URL": "Glances URL",
+    "Username": "Username",
+    "Password": "Password",
+    "Metric": "Metric",
+    "Memory": "Memory",
+    "Swap": "Swap",
+    "Load (1 min)": "Load (1 min)",
+    "Disk": "Disk",
+    "Network": "Network",
+    "Temperature": "Temperature",
+    "Target": "Target",
+    "Auto": "Auto",
+    "Label": "Label",
+    "Interval": "Interval",
+    "Warning at": "Warning at",
+    "Critical at": "Critical at",
+    "Checking…": "Checking…",
+    "Connected to Glances API": "Connected to Glances API",
+    "Enter the Glances server URL": "Enter the Glances server URL",
+    "Server not reachable": "Server not reachable",
+    "Login failed": "Login failed",
+    "Not a Glances server": "Not a Glances server",
+    "This server has no data for this metric": "This server has no data for this metric"
+  }
+}

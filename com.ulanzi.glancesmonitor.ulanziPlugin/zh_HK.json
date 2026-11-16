@@ -1,0 +1,35 @@
+{
+  "Name": "Glances 監控",
+  "Description": "在按鍵上即時顯示來自 Glances REST API 的伺服器指標。",
+  "Actions": [
+    {
+      "Name": "伺服器指標",
+      "Tooltip": "運行 Glances 的伺服器的 CPU、記憶體、交換分區、負載、磁碟、網絡、溫度或 GPU"
+    }
+  ],
+  "Localization": {
+    "Glances URL": "Glances 地址",
+    "Username": "用戶名",
+    "Password": "密碼",
+    "Metric": "指標",
+    "Memory": "記憶體",
+    "Swap": "交換分區",
+    "Load (1 min)": "負載（1 分鐘）",
+    "Disk": "磁碟",
+    "Network": "網絡",
+    "Temperature": "溫度",
+    "Target": "目標",
+    "Auto": "自動",
+    "Label": "標籤",
+    "Interval": "更新間隔",
+    "Warning at": "警告閾值",
+    "Critical at": "嚴重閾值",
+    "Checking…": "正在檢查…",
+    "Connected to Glances API": "已連接 Glances API",
+    "Enter the Glances server URL": "請輸入 Glances 伺服器地址",
+    "Server not reachable": "無法連接伺服器",
+    "Login failed": "登入失敗",
+    "Not a Glances server": "不是 Glances 伺服器",
+    "This server has no data for this metric": "此伺服器沒有此指標的數據"
+  }
+}

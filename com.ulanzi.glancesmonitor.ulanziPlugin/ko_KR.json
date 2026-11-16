@@ -1,0 +1,35 @@
+{
+  "Name": "Glances Monitor",
+  "Description": "Glances REST API의 서버 지표를 키에 실시간으로 표시합니다.",
+  "Actions": [
+    {
+      "Name": "서버 지표",
+      "Tooltip": "Glances를 실행하는 서버의 CPU, 메모리, 스왑, 부하, 디스크, 네트워크, 온도 또는 GPU"
+    }
+  ],
+  "Localization": {
+    "Glances URL": "Glances URL",
+    "Username": "사용자 이름",
+    "Password": "비밀번호",
+    "Metric": "지표",
+    "Memory": "메모리",
+    "Swap": "스왑",
+    "Load (1 min)": "부하 (1분)",
+    "Disk": "디스크",
+    "Network": "네트워크",
+    "Temperature": "온도",
+    "Target": "대상",
+    "Auto": "자동",
+    "Label": "레이블",
+    "Interval": "갱신 간격",
+    "Warning at": "경고 기준",
+    "Critical at": "위험 기준",
+    "Checking…": "확인 중…",
+    "Connected to Glances API": "Glances API에 연결됨",
+    "Enter the Glances server URL": "Glances 서버 URL을 입력하세요",
+    "Server not reachable": "서버에 연결할 수 없음",
+    "Login failed": "로그인 실패",
+    "Not a Glances server": "Glances 서버가 아님",
+    "This server has no data for this metric": "이 서버에는 이 지표의 데이터가 없습니다"
+  }
+}

@@ -1,5 +1,5 @@
 [Unit]
-Description=Glances web server for the Homelab Stats Ulanzi plugin
+Description=Glances web server for the Glances Monitor Ulanzi plugin
 After=network-online.target
 
 [Service]

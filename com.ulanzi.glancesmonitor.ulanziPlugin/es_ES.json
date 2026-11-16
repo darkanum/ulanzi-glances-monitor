@@ -1,0 +1,35 @@
+{
+  "Name": "Glances Monitor",
+  "Description": "Métricas del servidor en vivo desde la API REST de Glances en tus teclas.",
+  "Actions": [
+    {
+      "Name": "Métrica del servidor",
+      "Tooltip": "CPU, RAM, swap, carga, disco, red, temperatura o GPU de un servidor con Glances"
+    }
+  ],
+  "Localization": {
+    "Glances URL": "URL de Glances",
+    "Username": "Usuario",
+    "Password": "Contraseña",
+    "Metric": "Métrica",
+    "Memory": "Memoria",
+    "Swap": "Swap",
+    "Load (1 min)": "Carga (1 min)",
+    "Disk": "Disco",
+    "Network": "Red",
+    "Temperature": "Temperatura",
+    "Target": "Objetivo",
+    "Auto": "Automático",
+    "Label": "Etiqueta",
+    "Interval": "Intervalo",
+    "Warning at": "Aviso en",
+    "Critical at": "Crítico en",
+    "Checking…": "Comprobando…",
+    "Connected to Glances API": "Conectado a la API de Glances",
+    "Enter the Glances server URL": "Introduce la URL del servidor Glances",
+    "Server not reachable": "Servidor inaccesible",
+    "Login failed": "Error de inicio de sesión",
+    "Not a Glances server": "No es un servidor Glances",
+    "This server has no data for this metric": "Este servidor no tiene datos para esta métrica"
+  }
+}
