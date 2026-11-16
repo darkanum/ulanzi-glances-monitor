@@ -1,6 +1,7 @@
 (function () {
   const REFRESH_MS = Math.max(1, Number(document.body.dataset.refresh) || 5) * 1000;
   const HISTORY = 60;
+  const WARMUP_RETRY_MS = 2000;
   const THEME_KEY = 'glances-dashboard-theme';
   const VIRTUAL_NIC = /^(lo$|loopback|docker\d*|veth|br-|virbr|vnet|cni|flannel)/i;
   const VIRTUAL_DISK = /^(loop|ram|zram)|^(nvme\d+n\d+p|mmcblk\d+p)\d+$|^(sd|hd|vd|xvd)[a-z]+\d+$/i;
@@ -378,17 +379,19 @@
       }
     }
     setStatus(anyOk);
-    if (!anyOk) return;
+    if (!anyOk) return false;
     byId('uptime').textContent = d.uptime ? `up ${d.uptime}` : '';
     renderAlerts(d.alert);
     renderGauges(d);
-    if (!warmingUp(d)) renderCores(d.percpu);
+    const warming = warmingUp(d);
+    if (!warming) renderCores(d.percpu);
     renderSensors(d.sensors);
     renderFs(d.fs);
     renderNet(d.network);
     renderDiskio(d.diskio);
     renderProcs(d.processlist);
     renderContainers(d.containers);
+    return warming;
   }
 
   function setupTheme() {
@@ -417,13 +420,14 @@
     setupTheme();
     let cores = null;
     for (;;) {
+      let warming = false;
       try {
         if (!available) cores = await loadHeader();
-        await tick(cores);
+        warming = await tick(cores);
       } catch (error) {
         setStatus(false);
       }
-      await new Promise((resolve) => setTimeout(resolve, REFRESH_MS));
+      await new Promise((resolve) => setTimeout(resolve, warming ? WARMUP_RETRY_MS : REFRESH_MS));
     }
   }
 
