@@ -18,6 +18,6 @@ def icon(size, background=True):
         d.rectangle([x0, base - (base - pad) * level, x0 + width, base], fill=color)
     return img
 
-icon(144).save(out / "icon.png")
-icon(144).save(out / "actionIcon.png")
+icon(196).save(out / "icon.png")
+icon(196).save(out / "actionIcon.png")
 icon(56, background=False).save(out / "categoryIcon.png")

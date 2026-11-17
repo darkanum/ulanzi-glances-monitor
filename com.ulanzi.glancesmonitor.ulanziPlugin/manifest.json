@@ -5,28 +5,48 @@
       "Icon": "assets/icons/actionIcon.png",
       "PropertyInspectorPath": "property-inspector/metric/inspector.html",
       "state": 0,
-      "States": [{ "Name": "Metric", "Image": "assets/icons/actionIcon.png" }],
+      "States": [
+        {
+          "Name": "Metric",
+          "Image": "assets/icons/actionIcon.png"
+        }
+      ],
       "Tooltip": "CPU, RAM, swap, load, disk, network, temperature or GPU of a server running Glances",
       "UUID": "com.ulanzi.ulanzistudio.glancesmonitor.metric",
-      "Controllers": ["Keypad"],
+      "Controllers": [
+        "Keypad"
+      ],
       "SupportedInMultiActions": false
     }
   ],
   "Author": "darkanum",
   "Name": "Glances Monitor",
   "Description": "Live server metrics from the Glances REST API on your keys.",
+  "Detail": "Each key shows one live metric of a server that runs Glances: CPU, memory, swap, load, disk, network, temperature, GPU usage or GPU temperature. Works with Glances 4 (API v4) and Glances 3 (API v3), and with password login on Glances 4. Disk, network, temperature and GPU keys can follow a specific partition, interface, sensor or GPU. Keys turn green, amber or red at limits you set, and show a clear state when the server is offline, the login fails or there is no data. Source and setup guide: https://github.com/darkanum/ulanzi-glances-monitor",
   "Icon": "assets/icons/icon.png",
   "Version": "1.1.0",
   "Category": "Glances Monitor",
   "CategoryIcon": "assets/icons/categoryIcon.png",
+  "Banner": [
+    "assets/banners/banner-01.png",
+    "assets/banners/banner-02.png"
+  ],
   "CodePath": "plugin/app.html",
   "Type": "JavaScript",
   "SupportedInMultiActions": false,
   "PrivateAPI": true,
   "UUID": "com.ulanzi.ulanzistudio.glancesmonitor",
   "OS": [
-    { "Platform": "windows", "MinimumVersion": "10" },
-    { "Platform": "mac", "MinimumVersion": "10.11" }
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    },
+    {
+      "Platform": "mac",
+      "MinimumVersion": "10.11"
+    }
   ],
-  "Software": { "MinVersion": "2.1.4" }
+  "Software": {
+    "MinVersion": "2.1.4"
+  }
 }
